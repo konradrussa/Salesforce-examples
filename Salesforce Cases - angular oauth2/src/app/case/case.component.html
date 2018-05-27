@@ -1,0 +1,18 @@
+<div *ngIf="canRender">
+	<input #box (keyup.enter)="onEnter(box.value)">
+	<button (click)="onClickMe(box.value)">Click me!</button>
+	
+	<div class="datagrid">
+		<table>
+		  <thead>
+		  	<tr>
+				<th>CaseNumber</th>
+				<th>Subject</th> 
+			</tr>
+		  </thead>
+			<tr *ngFor="let case of cases">
+		      <td>{{ case.CaseNumber }}</td><td>{{ case.Subject }}</td>
+		    </tr>
+		</table>
+	</div>
+</div>
